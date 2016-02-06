@@ -1,9 +1,9 @@
-<?php namespace SammyK\LaravelFacebookSdk;
+<?php namespace LinkThrow\LumenFacebookSdk;
 
 use Laravel\Lumen\Routing\UrlGenerator;
 use Facebook\Url\UrlDetectionInterface;
 
-class LaravelUrlDetectionHandler implements UrlDetectionInterface
+class LumenUrlDetectionHandler implements UrlDetectionInterface
 {
     /**
      * @var UrlGenerator

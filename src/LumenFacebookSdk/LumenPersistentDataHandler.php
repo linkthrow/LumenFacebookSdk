@@ -1,9 +1,9 @@
-<?php namespace SammyK\LaravelFacebookSdk;
+<?php namespace LinkThrow\LumenFacebookSdk;
 
 use Illuminate\Session\Store as Session;
 use Facebook\PersistentData\PersistentDataInterface;
 
-class LaravelPersistentDataHandler implements PersistentDataInterface
+class LumenPersistentDataHandler implements PersistentDataInterface
 {
     /**
      * @const string Prefix to use for session variables.

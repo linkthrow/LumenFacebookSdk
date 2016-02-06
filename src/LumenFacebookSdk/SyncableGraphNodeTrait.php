@@ -1,4 +1,4 @@
-<?php namespace SammyK\LaravelFacebookSdk;
+<?php namespace LinkThrow\LumenFacebookSdk;
 
 use Illuminate\Database\Eloquent\Model;
 use Facebook\GraphNodes\GraphObject;

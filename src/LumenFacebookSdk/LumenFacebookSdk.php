@@ -1,10 +1,10 @@
-<?php namespace SammyK\LaravelFacebookSdk;
+<?php namespace LinkThrow\LumenFacebookSdk;
 
 use Illuminate\Config\Repository as Config;
 use Laravel\Lumen\Routing\UrlGenerator as Url;
 use Facebook\Facebook;
 
-class LaravelFacebookSdk extends Facebook
+class LumenFacebookSdk extends Facebook
 {
     /**
      * @var Config
@@ -38,7 +38,7 @@ class LaravelFacebookSdk extends Facebook
     /**
      * @param array $config
      *
-     * @return LaravelFacebookSdk
+     * @return LumenFacebookSdk
      */
     public function newInstance(array $config)
     {
@@ -117,7 +117,7 @@ class LaravelFacebookSdk extends Facebook
      */
     private function getScope(array $scope)
     {
-        return $scope ?: $this->config_handler->get('laravel-facebook-sdk.default_scope');
+        return $scope ?: $this->config_handler->get('lumen-facebook-sdk.default_scope');
     }
 
     /**
@@ -129,7 +129,7 @@ class LaravelFacebookSdk extends Facebook
      */
     private function getCallbackUrl($callback_url)
     {
-        $callback_url = $callback_url ?: $this->config_handler->get('laravel-facebook-sdk.default_redirect_uri');
+        $callback_url = $callback_url ?: $this->config_handler->get('lumen-facebook-sdk.default_redirect_uri');
 
         return $this->url->to($callback_url);
     }
