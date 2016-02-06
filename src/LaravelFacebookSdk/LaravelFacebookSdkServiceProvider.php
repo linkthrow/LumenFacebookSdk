@@ -34,10 +34,6 @@ class LaravelFacebookSdkServiceProvider extends ServiceProvider
         $this->app->bind('SammyK\LaravelFacebookSdk\LaravelFacebookSdk', function ($app) {
             $config = $app['config']->get('laravel-facebook-sdk.facebook_config');
 
-            if (! isset($config['persistent_data_handler'])) {
-                $config['persistent_data_handler'] = new LaravelPersistentDataHandler($app['session.store']);
-            }
-
             if (! isset($config['url_detection_handler'])) {
                 $config['url_detection_handler'] = new LaravelUrlDetectionHandler($app['url']);
             }
